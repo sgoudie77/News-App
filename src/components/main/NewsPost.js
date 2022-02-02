@@ -12,7 +12,8 @@ function NewsPost(props) {
             </div> */}
             <div className="news-post-content">
                 <div className="news-post-image">
-                    <img src={props.newsPost.urlToImage} alt="News Story" />
+                    {/* <img src={props.newsPost.urlToImage} alt="News Story" /> */}
+                    <img src={props.newsPost.image} alt="News Story" />
                 </div>
                 <div className="news-post-title">
                     <h3>{props.newsPost.title}</h3>

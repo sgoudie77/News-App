@@ -18,10 +18,11 @@ function Headline(props) {
     return ( 
         <div className="headline">
             <div className="headline-img">
-                <img src={props.headlines.urlToImage} alt="Headline News" />
+                {/* <img src={props.headlines.urlToImage} alt="Headline News" /> */}
+                <img src={props.headlines.image} alt="Headline News" />
             </div>
             <div className="headline-title">
-                <p>{props.headlines.publishedAt}</p>
+                {/* <p>{props.headlines.publishedAt}</p> */}
                 {/* <p>{dateFormat}</p> */}
                 <h1>{props.headlines.title}</h1>
             </div>
