@@ -12,20 +12,16 @@ import './css/main.css';
 function App() {
   return (
     <div className="App">
-      {/* <header className="App-header"> */}
-        
       <Router>
       <Navbar />
           <Routes>
               <Route path="/" exact element={<Main />} />
               <Route path="/about" exact element={<About />} />
               <Route path="/contact" exact element={<Contact />} />
-              {/* <Route path="*" exact element={<PageNotFound />} /> */}
+              <Route path="*" exact element={<PageNotFound />} />
           </Routes>
       <Footer />
       </Router>
-
-      {/* </header> */}
     </div>
   );
 }
