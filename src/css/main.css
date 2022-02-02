@@ -132,6 +132,7 @@ body {
     flex-direction: column;
     width: 100%;
     text-align: left;
+    /* border: 1px solid black; */
 }
 .sidebar-title h3 {
     font-size: 2rem;

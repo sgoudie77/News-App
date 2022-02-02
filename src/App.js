@@ -12,7 +12,7 @@ import './css/main.css';
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
+      {/* <header className="App-header"> */}
         
       <Router>
       <Navbar />
@@ -25,7 +25,7 @@ function App() {
       <Footer />
       </Router>
 
-      </header>
+      {/* </header> */}
     </div>
   );
 }

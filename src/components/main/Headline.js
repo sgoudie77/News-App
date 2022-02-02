@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import { ExternalLink } from 'react-external-link';
 
 function Headline(props) {
@@ -21,7 +21,7 @@ function Headline(props) {
                 <img src={props.headlines.urlToImage} alt="Headline News" />
             </div>
             <div className="headline-title">
-                {/* <p>{props.headlines.publishedAt}</p> */}
+                <p>{props.headlines.publishedAt}</p>
                 {/* <p>{dateFormat}</p> */}
                 <h1>{props.headlines.title}</h1>
             </div>

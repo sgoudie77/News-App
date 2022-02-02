@@ -29,7 +29,7 @@ function Main() {
                 {newsList && <Sidebar sidebarNews={newsList.articles.slice(1, 3)} />}
             </div>
             <div className='news-posts'>
-                {newsList && <News bottomNewsList={newsList.articles.slice(3, 12)} />}
+                {newsList && <News bottomNewsList={newsList.articles.slice(3, 9)} />}
             </div>
         </div>
     )
