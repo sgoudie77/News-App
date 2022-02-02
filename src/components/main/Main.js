@@ -7,7 +7,7 @@ function Main() {
 
     const [newsList, setNewsList] = useState(null);
     
-    const API_KEY = process.env.REACT_APP_API_KEY;
+    var API_KEY = process.env.REACT_APP_API_KEY;
     
     const [articleUrl, setArticleUrl] = useState(`https://newsapi.org/v2/top-headlines?country=us&category=general&apiKey=${API_KEY}`);
 
@@ -20,7 +20,7 @@ function Main() {
             console.log(data);
             setNewsList(data);
         })
-    },[])
+    }, [])
 
     return (
         <div>

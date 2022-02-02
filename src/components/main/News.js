@@ -3,7 +3,6 @@ import NewsPost from './NewsPost'
 
 function News(props) {
     
-    
     return (
         <div className="news-posts-area">
             <ul>{props.bottomNewsList.map((newsPost, index) => {
