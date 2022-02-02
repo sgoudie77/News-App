@@ -20,7 +20,7 @@ function App() {
               <Route path="/" exact element={<Main />} />
               <Route path="/about" exact element={<About />} />
               <Route path="/contact" exact element={<Contact />} />
-              <Route path="*" exact element={<PageNotFound />} />
+              {/* <Route path="*" exact element={<PageNotFound />} /> */}
           </Routes>
       <Footer />
       </Router>

@@ -8,7 +8,7 @@ function Footer() {
                 <ul>
                     <Link to="/About"><li>About</li></Link>
                     <Link to="/Contact"><li>Contact</li></Link>
-                    <li>&#169;Get-Coding 2021</li>
+                    <li>&#169;Get-Coding 2022</li>
                 </ul>
             </div>
         </div>

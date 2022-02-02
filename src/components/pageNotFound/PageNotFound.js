@@ -1,6 +1,7 @@
 import React from 'react';
 import BtnHome from '../buttons/BtnHome';
 
+
 function PageNotFound() {
     return (
         <div className="page-not-found">
