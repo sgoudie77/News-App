@@ -1,0 +1,438 @@
+/* Global Styles Start Here */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 62.5%;
+}
+
+:root {
+    /* font sizes */
+    --fs-h1: 4rem;
+    --fs-h2: 3rem;
+    --fs-h3: 2.5rem;
+    --fs-h4: 2rem;
+    --fs-h5: 1.5rem;
+    --fs-p: 1rem;
+    /* colors */
+    --clr-white: #ffffff;
+    --clr-black: #000000;
+}
+
+body {
+    height: auto;
+    min-height: 100vh;
+    width: 100%;
+    max-width: 100vw;
+}
+
+.btn-home, .btn-categories {
+    position: relative;
+    height: 50px;
+    width: 150px;
+    color: #000;
+    background-color: lightgray;
+    border: 1px solid #000;
+    outline: none;
+}
+/* Global Styles End Here */
+
+/* Navbar Styles Start Here */
+/* .navbar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #000;
+}
+
+.navbar .nav-links ul {
+    position: relative;
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+}
+
+.navbar .nav-links ul li {
+    margin-right: 2.5rem;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    padding-top: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+} */
+/* Navbar Styles End Here */
+
+/* Main Styles Start Here */
+.main {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: auto;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.headline {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 65%;
+    padding: 1rem;
+    align-self: start;
+    margin-top: 3rem;
+}
+.headline-title {
+    font-size: 2rem;
+}
+.headline-img {
+    position: relative;
+    display: flex;
+}
+.headline-img img {
+    width: 100%;
+}
+.headline-text {
+    font-size: 2rem;
+    text-align: left;
+    width: 100%;
+    padding: 0.5rem;
+}
+.headline-text p {
+    margin-bottom: 1.5rem;
+    line-height: 32px;
+}
+.headline-text p span {
+    color: red;
+    text-decoration: underline;
+}
+/* Main Styles end Here */
+
+/* Sidebar Styles Start Here */
+.sidebar {
+    position: relative;
+    width: 30%;
+    margin-top: 4rem;
+}
+
+.sidebar ul li {
+    list-style: none;
+}
+
+.sidebar-post {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    text-align: left;
+}
+.sidebar-title h3 {
+    font-size: 2rem;
+}
+
+.sidebar-image img {
+    width: 385px;
+}
+.sidebar-text {
+    margin-bottom: 4rem;
+    font-size: 1.5rem;
+}
+.sidebar-text p span {
+    color: red;
+    text-decoration: underline;
+}
+/* Sidebar Styles End Here */
+
+/* Lower News Posts Styles Start Here */
+.news-posts {
+    width: 100%;
+    max-width: 100vw;
+}
+
+.news-posts-area {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+.news-posts-area ul {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.news-posts-area ul li {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    width: 30%;
+}
+
+.news-post {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    text-align: left;
+    padding: 1rem;
+}
+
+.news-post-title h3 {
+    font-size: 1.6rem;
+    margin-top: 1rem;
+}
+
+.news-post-content {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    margin-top: 1rem;
+}
+.news-post-image img {
+    width: 150px;
+    padding-top: 1rem;
+    margin-right: 1rem;
+}
+.news-post-text {
+    text-align: left;
+    padding: .5rem;
+    font-size: 1.4rem;
+}
+.news-post-text p span {
+    color: red;
+    text-decoration: underline;
+}
+/* Lower News Posts Styles End Here */
+
+/* Categories Page Styles Start Here */
+/* .category-page {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.category-page-items {
+    margin: 2rem 0;
+}
+
+.category-page-items ul li {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.category-page h2 {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    margin-top: 4rem;
+}
+
+.category-page-btn {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.category-page-post {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    width: 75%;
+    height: auto;
+    text-align: left;
+    padding: 1rem;
+}
+.category-page-title h3 {
+    font-size: 2rem;
+    text-transform: uppercase;
+    border-bottom: 1px solid #000;
+}
+.category-page-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    
+}
+.category-page-image {
+    position: relative;
+    display: flex;
+    height: auto;
+    align-items: center;
+    margin-right: 1rem;
+}
+.category-page-image img {
+    width: 150px;
+}
+.category-page-text {
+    text-align: left;
+    padding: .5rem;
+    font-size: 1.4rem;
+}
+.category-page-text p span {
+    color: red;
+    text-decoration: underline;
+} */
+/* Categories Page Styles End Here */
+
+/* Article Page Styles Start Here */
+/* .article {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    max-width: 100vw;
+    height: auto;
+}
+
+.article-image{
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+.article-image img {
+    width: 80%;
+    margin-top: 3rem;
+}
+.article-title {
+    font-size: 2rem;
+    width: 70%;
+}
+.article-text {
+    font-size: 1.5rem;
+    width: 70%;
+    
+    height: auto;
+}
+.article-text p {
+    margin-bottom: 1rem;
+}
+.article-btns {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin: 2rem 0;
+} */
+/* Article Page Styles end Here */
+
+/* Footer Styles Start Here */
+.footer-links {
+    background: linear-gradient(90deg, rgb(110, 94, 254) 0%, rgba(73, 63, 252, 1) 100%);
+}
+.footer-links ul {
+    position: relative;
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+}
+.footer-links ul a {
+    text-decoration: none;
+}
+.footer-links ul li {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    text-transform: uppercase;
+    padding: 0.5rem 1rem;
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    color: #fff;
+}
+/* Footer Styles End Here */
+
+/* About Page Styles Start Here */
+.about {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 78.75vh;
+    justify-content: center;
+    align-items: center;
+}
+.about-info h1 {
+    display: flex;
+    justify-content: center;
+    text-transform: uppercase;
+    margin: 1rem 0;
+}
+.about-info p {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    padding: 1rem 5rem;
+    font-size: 1.5rem;
+    letter-spacing: 1.5px;
+}
+.about-btn {
+    margin: 2rem 0;
+}
+/* About Page Styles End Here */
+
+/* Contact Page Styles Start Here */
+.contact {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 78.75vh;
+    justify-content: center;
+    align-items: center;
+}
+.contact-info h1 {
+    display: flex;
+    justify-content: center;
+    text-transform: uppercase;
+    margin: 1rem 0;
+}
+.contact-info p {
+    position: relative;
+    display: flex;
+    padding: 1rem 5rem;
+    font-size: 1.5rem;
+    letter-spacing: 1.5px;
+    text-align: left;
+}
+.contact-btn {
+    margin: 2rem 0;
+}
+/* Contact Page Styles End Here */
+
+/* Page Not Found Styles Start Here */
+.page-not-found {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    min-height: 78.75vh;
+    width: 100%;
+}
+.page-not-found h1 {
+    margin-bottom: 2rem;
+}
+/* Page Not Found Styles End Here */
+
+/* Responsive Styles Start Here */
+/* Responsive Styles End Here */
