@@ -6,8 +6,7 @@ function SidebarPost(props) {
     return (
         <div className="sidebar-post">
             <div className="sidebar-image">
-                {/* <img src={props.sidebarPost.urlToImage} alt="Top News" /> */}
-                <img src={props.sidebarPost.image} alt="Top News" />
+                <img src={props.sidebarPost.urlToImage} alt="Top News" />
             </div>
             <div className="sidebar-title">
                 <h3>{props.sidebarPost.title}</h3>
