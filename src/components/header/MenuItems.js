@@ -1,32 +1,27 @@
 export const MenuItems = [
     {
-        link: 'Home',
+        link: 'general',
         url: '#',
         cName: 'nav-links'
     },
     {
-        link: 'About',
+        link: 'business',
         url: '#',
         cName: 'nav-links'
     },
     {
-        link: 'Contact',
+        link: 'science',
+        url: '#',
+        cName: 'nav-links'
+    },
+    {
+        link: 'sports',
+        url: '#',
+        cName: 'nav-links'
+    },
+    {
+        link: 'technology',
         url: '#',
         cName: 'nav-links'
     }
-    // {
-    //     link: 'Health',
-    //     url: '#',
-    //     cName: 'nav-links'
-    // },
-    // {
-    //     link: 'Sports',
-    //     url: '#',
-    //     cName: 'nav-links'
-    // },
-    // {
-    //     link: 'Tech',
-    //     url: '#',
-    //     cName: 'nav-links'
-    // }
 ]

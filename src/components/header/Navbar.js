@@ -2,16 +2,26 @@ import React, { Component } from 'react'
 import { MenuItems } from './MenuItems'
 import './Navbar.css'
 import logo from '../../img/GNS-logo.png'
-import { Link, NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+
 
 
 class Navbar extends Component {
     state = { clicked: false }
-
+    
     handleClick = () => {
         this.setState({ clicked: !this.state.clicked })
     }
     
+
+    state = { categoryClicked: 'general' }
+    
+    categoryClick = () => {
+        this.setState({ categoryClicked: this.state.categoryClicked })
+        console.log('you clicked a link');
+    }
+    
+
     render(){
         return(
             <nav className="NavbarItems">
@@ -27,7 +37,7 @@ class Navbar extends Component {
                     {MenuItems.map((item, index) => {
                         return (
                             <li key={index}>
-                                <a className={item.cName} href={item.url}>
+                                <a className={item.cName} categoryClicked={this.state.categoryClicked} onClick={this.categoryClick}>
                                     {item.link}
                                 </a>
                             </li>

@@ -3,13 +3,16 @@ import Sidebar from '../sidebar/Sidebar';
 import News from './News';
 import Headline from './Headline';
 
+
 function Main() {
 
     const [newsList, setNewsList] = useState(null);
-    
+
     var API_KEY = process.env.REACT_APP_API_KEY;
-    
-    const [articleUrl, setArticleUrl] = useState(`https://newsapi.org/v2/top-headlines?country=us&category=general&apiKey=${API_KEY}`);
+
+    const [category, setCategory] = useState('general');
+
+    const [articleUrl, setArticleUrl] = useState(`https://newsapi.org/v2/top-headlines?country=us&category=${category}&apiKey=${API_KEY}`);
 
     useEffect(() => {
         fetch(articleUrl)
