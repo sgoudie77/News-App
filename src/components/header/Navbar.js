@@ -13,14 +13,10 @@ class Navbar extends Component {
         this.setState({ clicked: !this.state.clicked })
     }
     
-
-    state = { categoryClicked: 'general' }
-    
-    categoryClick = () => {
-        this.setState({ categoryClicked: this.state.categoryClicked })
-        console.log('you clicked a link');
-    }
-    
+    // categoryClick = () => {
+    //     this.setState({ categoryClicked: this.state.categoryClicked })
+    //     console.log('you clicked a link');
+    // }
 
     render(){
         return(
@@ -36,8 +32,8 @@ class Navbar extends Component {
                 <ul className={this.state.clicked ? 'nav-menu active' : 'nav-menu'}>
                     {MenuItems.map((item, index) => {
                         return (
-                            <li key={index}>
-                                <a className={item.cName} categoryClicked={this.state.categoryClicked} onClick={this.categoryClick}>
+                            <li key={index} onClick={this.props.categoryClick(item.link)}>
+                                <a className={item.cName} >
                                     {item.link}
                                 </a>
                             </li>

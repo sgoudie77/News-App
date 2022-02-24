@@ -1,10 +1,14 @@
 import React from 'react';
 // import { Link } from 'react-router-dom';
 import { ExternalLink } from 'react-external-link';
-
+import NoImage from '../../img/noimage.jpg';
 
 function NewsPost(props) {
     
+    // if (props.urlToImage == null) {
+    //     <img src={NoImage} alt="News Story" />
+    // }
+
     return (
         <div className="news-post">
             {/* <div className="category-title">
@@ -12,7 +16,7 @@ function NewsPost(props) {
             </div> */}
             <div className="news-post-content">
                 <div className="news-post-image">
-                    <img src={props.newsPost.urlToImage} alt="News Story" />
+                    <img src={props.newsPost.urlToImage} alt="News Story" onError={(e)=>{e.target.onerror = null; e.target.src={NoImage}}}/>
                 </div>
                 <div className="news-post-title">
                     <h3>{props.newsPost.title}</h3>
