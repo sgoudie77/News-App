@@ -5,18 +5,12 @@ import logo from '../../img/GNS-logo.png'
 import { Link } from 'react-router-dom';
 
 
-
 class Navbar extends Component {
     state = { clicked: false }
     
     handleClick = () => {
         this.setState({ clicked: !this.state.clicked })
     }
-    
-    // categoryClick = () => {
-    //     this.setState({ categoryClicked: this.state.categoryClicked })
-    //     console.log('you clicked a link');
-    // }
 
     render(){
         return(
@@ -32,7 +26,7 @@ class Navbar extends Component {
                 <ul className={this.state.clicked ? 'nav-menu active' : 'nav-menu'}>
                     {MenuItems.map((item, index) => {
                         return (
-                            <li key={index} onClick={this.props.categoryClick(item.link)}>
+                            <li key={index} onClick={() => this.props.categoryClick(item.link)}>
                                 <a className={item.cName} >
                                     {item.link}
                                 </a>
