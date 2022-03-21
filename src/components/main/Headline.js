@@ -15,7 +15,7 @@ function Headline(props) {
     // }
     
     const dateObject = new Date(props.headlines.publishedAt);
-    const dateDisplay = dateObject.toLocaleString("en-US", {weekday: "long", month: "long", day: "numeric"})
+    const dateDisplay = dateObject.toLocaleString("en-US", {weekday: "long", month: "long", day: "numeric"});
     const fallbackSrc = NoImage
 
     return ( 
@@ -28,7 +28,6 @@ function Headline(props) {
                 </div>
                 <div className="headline-title">
                     <p>{dateDisplay}</p>
-                    {/* <p>{dateFormat}</p> */}
                     <h1>{props.headlines.title}</h1>
                 </div>
                 <div className="headline-text">

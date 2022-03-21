@@ -9,24 +9,6 @@ import PageNotFound from './components/pageNotFound/PageNotFound';
 import './css/main.css';
 
  
-/* 
-category intervals for each category
-general - 
-*/
-
-
-// const currentTime = new Date();
-// const secondsInHour = function convertHourstoSeconds(hours) {
-//         return Math.floor(hours * 60 * 60);
-//     };
-
-// const expiry = currentTime.getTime() + (secondsInHour(currentTime) * 1000);
-// localStorage.expiry = expiry;
-
-// if (!localStorage.currentNewsList) {
-
-// }
-
 
 function App() {
   
@@ -40,7 +22,17 @@ function App() {
         setArticleUrl(`https://newsapi.org/v2/top-headlines?country=us&category=${category}&apiKey=${API_KEY}`)
     }
 
-    useEffect(() => {
+    // set boolean for initial page load
+    let isDataFromLocalStorage = false;
+
+    // set variable from local storage
+    let newsListFromLocalStorage = [];
+    
+    // set expiry time value
+    const millisecondsInHour = 3600000;
+    
+    const getCurrentNewsList = () => {
+        console.log('test1')
         fetch(articleUrl)
         .then((response) => {
             return response.json();
@@ -49,18 +41,49 @@ function App() {
             console.log(data);
             setNewsList(data);
             localStorage.setItem('currentNewsList', JSON.stringify(data));
-            const currentNewsList = JSON.parse(localStorage.getItem('currentNewsList'));
-            console.log('localStorage');
-            console.log(currentNewsList);
+            const currentTime = new Date();
+            // set expiry
+            const expiry = currentTime.getTime() + millisecondsInHour;
+            localStorage.expiry = expiry;
         })
-    }, [articleUrl])
+    }    
+    
+    useEffect(() => {
+        if (!localStorage.currentNewsList) {
+            getCurrentNewsList()
+        }
+    }, [])
+
+
+    // set the conditional here to check if the localStorage already has data
+    if(localStorage.currentNewsList) {
+        let currentNewsListExpiry = parseInt(localStorage.getItem('expiry'))
+        let now = new Date()
+    
+        if(now.getTime() > currentNewsListExpiry) {
+            localStorage.removeItem('currentNewsList')
+            localStorage.removeItem('expiry')
+            console.log('test3')
+            isDataFromLocalStorage = false;
+            getCurrentNewsList()
+        } else {
+            isDataFromLocalStorage = true;
+            newsListFromLocalStorage = JSON.parse(localStorage.getItem('currentNewsList'))
+        } 
+    } 
+    // else {
+    //     console.log('test2')
+    //     isDataFromLocalStorage = false;
+    //     getCurrentNewsList()
+    // }    
+        
         
     return (
         <div className="App">
             <Router>
             <Navbar categoryClick={categoryClick} />
                 <Routes>
-                    <Route path="/" exact element={<Main newsList={newsList} />} />
+                    <Route path="/" exact element={<Main newsList={isDataFromLocalStorage ? newsListFromLocalStorage : newsList} />} />
                     <Route path="/about" exact element={<About />} />
                     <Route path="/contact" exact element={<Contact />} />
                     <Route path="*" exact element={<PageNotFound />} />
