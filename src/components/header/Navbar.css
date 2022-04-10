@@ -5,6 +5,7 @@
     justify-content: center;
     align-items: center;
     font-size: 1.2rem;
+    /* width: 100%; */
 }
 
 .navbar-logo {
@@ -60,6 +61,31 @@
 
 .menu-icon {
     display: none;
+}
+
+.search-bar-nav {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 95px;
+    background-color: white;
+    padding: .5rem .25rem;
+    /* text-decoration: none; */
+}
+/* .search-bar-nav a {
+    text-decoration: none;
+} */
+.search-bar-nav i {
+    width: 20px;
+    font-size: 16px;
+    color: black;
+    /* text-decoration: none; */
+}
+.search-bar-nav p {
+    font-size: 1.2rem;
+    font-weight: 200;
+    /* text-decoration: none; */
 }
 
 @media screen and (max-width: 768px) {

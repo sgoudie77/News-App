@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/header/Navbar';
 import Main from './components/main/Main';
 import Footer from './components/footer/Footer';
+import SearchPage from './components/search/SearchPage';
 import About from './components/about/About';
 import Contact from './components/contact/Contact';
 import PageNotFound from './components/pageNotFound/PageNotFound';
@@ -32,7 +33,7 @@ function App() {
     const millisecondsInHour = 3600000;
     
     const getCurrentNewsList = () => {
-        console.log('test1')
+        // console.log('test1')
         fetch(articleUrl)
         .then((response) => {
             return response.json();
@@ -63,7 +64,7 @@ function App() {
         if(now.getTime() > currentNewsListExpiry) {
             localStorage.removeItem('currentNewsList')
             localStorage.removeItem('expiry')
-            console.log('test3')
+            // console.log('test3')
             isDataFromLocalStorage = false;
             getCurrentNewsList()
         } else {
@@ -84,6 +85,7 @@ function App() {
             <Navbar categoryClick={categoryClick} />
                 <Routes>
                     <Route path="/" exact element={<Main newsList={isDataFromLocalStorage ? newsListFromLocalStorage : newsList} />} />
+                    <Route path="/searchPage" exact element={<SearchPage />} />
                     <Route path="/about" exact element={<About />} />
                     <Route path="/contact" exact element={<Contact />} />
                     <Route path="*" exact element={<PageNotFound />} />

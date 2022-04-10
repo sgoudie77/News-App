@@ -3,6 +3,7 @@ import { MenuItems } from './MenuItems'
 import './Navbar.css'
 import logo from '../../img/GNS-logo.png'
 import { Link } from 'react-router-dom';
+import SearchBar from './SearchBar';
 
 
 class Navbar extends Component {
@@ -20,6 +21,16 @@ class Navbar extends Component {
                         <img src={logo} alt="logo" />
                     </Link>
                 </div>
+                
+                <div className='search-bar-nav-wrapper'>
+                    <Link to="/SearchPage">
+                        <div className='search-bar-nav'>
+                            <i className="fa fa-search"></i>
+                            <p>Search GNS</p>
+                        </div>
+                    </Link>
+                </div>
+
                 <div className="menu-icon" onClick={this.handleClick}>
                     <i className={this.state.clicked ? 'fas fa-times' : 'fas fa-bars'}></i>
                 </div>

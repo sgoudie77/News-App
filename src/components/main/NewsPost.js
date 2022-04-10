@@ -4,7 +4,7 @@ import NoImage from '../../img/noimage.jpg';
 function NewsPost(props) {
     
     const fallbackSrc = NoImage
-
+// check styles
     return ( 
         <div className="news-post">
             <div className="news-post-content">
