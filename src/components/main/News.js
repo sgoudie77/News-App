@@ -2,7 +2,7 @@ import React from 'react'
 import NewsPost from './NewsPost'
 
 function News(props) {
-    // check styles
+    
     return (
         <div className="news-posts-area">
             <h4>More News Stories</h4>

@@ -90,7 +90,7 @@ function App() {
                     <Route path="/contact" exact element={<Contact />} />
                     <Route path="*" exact element={<PageNotFound />} />
                 </Routes>
-            <Footer />
+            <Footer className="footer" />
             </Router>
         </div>
     );

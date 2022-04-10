@@ -23,7 +23,7 @@ class Navbar extends Component {
                 </div>
                 
                 <div className='search-bar-nav-wrapper'>
-                    <Link to="/SearchPage">
+                    <Link to="/SearchPage" style={{ textDecoration: 'none' }}>
                         <div className='search-bar-nav'>
                             <i className="fa fa-search"></i>
                             <p>Search GNS</p>

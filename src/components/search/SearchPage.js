@@ -17,7 +17,7 @@ function SearchPage() {
   
   function getSearchRequest(searchValue) {
     
-    const searchUrl = `https://newsapi.org/v2/everything?q=${searchValue}&apiKey=${API_KEY}`
+    const searchUrl = `https://newsapi.org/v2/everything?q=${searchValue}&pageSize=10&apiKey=${API_KEY}`
     
     fetch(searchUrl)
     .then((response) => {
