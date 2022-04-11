@@ -22,14 +22,6 @@ class Navbar extends Component {
                     </Link>
                 </div>
                 
-                <div className='search-bar-nav-wrapper'>
-                    <Link to="/SearchPage" style={{ textDecoration: 'none' }}>
-                        <div className='search-bar-nav'>
-                            <i className="fa fa-search"></i>
-                            <p>Search GNS</p>
-                        </div>
-                    </Link>
-                </div>
 
                 <div className="menu-icon" onClick={this.handleClick}>
                     <i className={this.state.clicked ? 'fas fa-times' : 'fas fa-bars'}></i>
@@ -45,6 +37,14 @@ class Navbar extends Component {
                         )
                     })}
                 </ul>
+                <div className='search-bar-nav-wrapper'>
+                    <Link to="/SearchPage" style={{ textDecoration: 'none' }}>
+                        <div className='search-bar-nav'>
+                            <i className="fa fa-search"></i>
+                            <p>Search GNS</p>
+                        </div>
+                    </Link>
+                </div>
             </nav>
         )
     }

@@ -32,7 +32,7 @@
     text-align: center;
     width: 92vw;
     justify-content: end;
-    margin-right: 1rem;
+    /* margin-right: 1rem; */
 }
 
 .nav-links{
@@ -68,14 +68,19 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 95px;
+    width: 100px;
     background-color: white;
     padding: .5rem .25rem;
     /* text-decoration: none; */
+    margin-right: 4rem;
+    /* font-size: 1.5rem;
+    letter-spacing: 2px;
+    font-weight: 800; */
+    font-size: 1.25rem;
+    letter-spacing: 1px;
+    /* font-weight: bold; */
 }
-/* .search-bar-nav a {
-    text-decoration: none;
-} */
+
 .search-bar-nav i {
     width: 20px;
     font-size: 16px;
@@ -146,5 +151,15 @@
     .fa-times {
         color: #fff;
         font-size: 2rem;
+    }
+
+    /* .search-bar-nav-wrapper {
+        position: relative;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    } */
+    .search-bar-nav {
+        margin-right: 0;
     }
 }
