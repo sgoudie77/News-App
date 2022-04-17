@@ -2,10 +2,9 @@ import React, { Component } from 'react'
 import { MenuItems } from './MenuItems'
 import './Navbar.css'
 import logo from '../../img/GNS-logo.png'
-import { Link, useLocation } from 'react-router-dom';
-// import SearchBar from './SearchBar';
+import { Link } from 'react-router-dom';
+import NavSearchBtn from './NavSearchBtn';
 
-// const { pathname } = useLocation();  
 
 class Navbar extends Component {
         state = { clicked: false }
@@ -17,10 +16,6 @@ class Navbar extends Component {
         closeMenu = () => {
             this.setState({ clicked: false })
         }
-        
-        // location = () => {
-        //    useLocation()
-        // }
 
 
         render(){
@@ -49,14 +44,15 @@ class Navbar extends Component {
                     })}
                 </ul>
                 
-                <div className="search-bar-nav-wrapper">
+                {/* <div className="search-bar-nav-wrapper">
                     <Link to="/SearchPage" style={{ textDecoration: 'none' }}>
                         <div className='search-bar-nav'>
                             <i className="fa fa-search"></i>
                             <p>Search GNS</p>
                         </div>
                     </Link>
-                </div>
+                </div> */}
+                <NavSearchBtn />
             </nav>
         )
     }

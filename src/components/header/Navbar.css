@@ -63,12 +63,12 @@
     display: none;
 }
 
-.search-bar-nav-wrapper {
+/* .search-bar-nav-wrapper {
     display: flex;
 }
-.search-bar-nav-wrapper.active {
+.search-bar-nav-wrapper-hide {
     display: none;
-}
+} */
 
 .search-bar-nav {
     position: relative;
