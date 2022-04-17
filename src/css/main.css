@@ -299,7 +299,8 @@ body {
     flex-wrap: wrap;
     height: auto;
     width: 100%;
-    min-height: 76vh;
+    /* min-height: 76vh; */
+    min-height: calc(100vh - 160px);
     margin-bottom: 2rem;
 }
 .search-page ul {
@@ -393,6 +394,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: flex-end;
+    bottom: 0;
 }
 
 .footer-links {
@@ -429,7 +431,8 @@ body {
     display: flex;
     flex-direction: column;
     width: 100%;
-    min-height: 78.75vh;
+    /* min-height: 78.75vh; */
+    min-height: calc(100vh - 140px);
     justify-content: center;
     align-items: center;
 }
@@ -461,7 +464,8 @@ body {
     display: flex;
     flex-direction: column;
     width: 100%;
-    min-height: 78.75vh;
+    /* min-height: 78.75vh; */
+    min-height: calc(100vh - 140px);
     justify-content: center;
     align-items: center;
 }
