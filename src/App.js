@@ -63,8 +63,8 @@ function App() {
         //check whether prev cat is not = to current cat
 
 
-        // 1 try to store the current cat 
-        // 2 update current cat variable with what the use has clicked
+        // 1 try to store the current category 
+        // 2 update current category variable with what the use has clicked
         // 3 make an if cond with || 
     
         if(now.getTime() > currentNewsListExpiry) {

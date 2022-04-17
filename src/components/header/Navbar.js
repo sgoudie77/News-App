@@ -2,18 +2,28 @@ import React, { Component } from 'react'
 import { MenuItems } from './MenuItems'
 import './Navbar.css'
 import logo from '../../img/GNS-logo.png'
-import { Link } from 'react-router-dom';
-import SearchBar from './SearchBar';
+import { Link, useLocation } from 'react-router-dom';
+// import SearchBar from './SearchBar';
 
+// const { pathname } = useLocation();  
 
 class Navbar extends Component {
-    state = { clicked: false }
-    
-    handleClick = () => {
-        this.setState({ clicked: !this.state.clicked })
-    }
+        state = { clicked: false }
+        
+        handleClick = () => {
+            this.setState({ clicked: !this.state.clicked })
+        }
 
-    render(){
+        closeMenu = () => {
+            this.setState({ clicked: false })
+        }
+        
+        // location = () => {
+        //    useLocation()
+        // }
+
+
+        render(){
         return(
             <nav className="NavbarItems">
                 <div className="logo">
@@ -22,7 +32,6 @@ class Navbar extends Component {
                     </Link>
                 </div>
                 
-
                 <div className="menu-icon" onClick={this.handleClick}>
                     <i className={this.state.clicked ? 'fas fa-times' : 'fas fa-bars'}></i>
                 </div>
@@ -30,14 +39,17 @@ class Navbar extends Component {
                     {MenuItems.map((item, index) => {
                         return (
                             <li key={index} onClick={() => this.props.categoryClick(item.link)}>
-                                <a className={item.cName} >
-                                    {item.link}
-                                </a>
+                                <Link to='/' style={{ textDecoration: 'none' }}>
+                                    <a className={item.cName} onClick={this.closeMenu}>
+                                        {item.link}
+                                    </a>
+                                </Link>
                             </li>
                         )
                     })}
                 </ul>
-                <div className='search-bar-nav-wrapper'>
+                
+                <div className="search-bar-nav-wrapper">
                     <Link to="/SearchPage" style={{ textDecoration: 'none' }}>
                         <div className='search-bar-nav'>
                             <i className="fa fa-search"></i>

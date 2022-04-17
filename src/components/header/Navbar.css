@@ -63,6 +63,13 @@
     display: none;
 }
 
+.search-bar-nav-wrapper {
+    display: flex;
+}
+.search-bar-nav-wrapper.active {
+    display: none;
+}
+
 .search-bar-nav {
     position: relative;
     display: flex;
