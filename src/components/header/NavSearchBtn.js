@@ -6,7 +6,7 @@ function NavSearchBtn() {
   
     // const { pathname } = useLocation();
     const location = useLocation();
-    console.log(location)
+    // console.log(location)
     
     return (
         <div>

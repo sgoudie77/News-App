@@ -14,13 +14,22 @@ import './css/main.css';
 function App() {
   
     var API_KEY = process.env.REACT_APP_API_KEY;
-    const category = 'general';
+    // let category = 'general';
+    let categoryChange = false;
+    const [category, setCategory] = useState('general')
     const [newsList, setNewsList] = useState(null);
-    const [articleUrl, setArticleUrl] = useState(`https://newsapi.org/v2/top-headlines?country=us&category=${category}&apiKey=${API_KEY}`);
+    // const [articleUrl, setArticleUrl] = useState(`https://newsapi.org/v2/top-headlines?country=us&category=${category}&apiKey=${API_KEY}`);
     
-    const categoryClick = (category) => {
-        console.log(`category: ${category}`);
-        setArticleUrl(`https://newsapi.org/v2/top-headlines?country=us&category=${category}&apiKey=${API_KEY}`)
+    const categoryClick = (clickedCategory) => {
+        console.log(`category: ${clickedCategory}`);
+        console.log(category)
+
+        if (category !== clickedCategory){
+            categoryChange = true
+        }
+        console.log(categoryChange)
+        setCategory(clickedCategory)
+        // setArticleUrl(`https://newsapi.org/v2/top-headlines?country=us&category=${clickedCategory}&apiKey=${API_KEY}`)
     }
 
     // set boolean for initial page load
@@ -34,6 +43,7 @@ function App() {
     
     const getCurrentNewsList = () => {
         // console.log('test1')
+        const articleUrl = `https://newsapi.org/v2/top-headlines?country=us&category=${category}&apiKey=${API_KEY}`
         fetch(articleUrl)
         .then((response) => {
             return response.json();
@@ -53,7 +63,7 @@ function App() {
         if (!localStorage.currentNewsList) {
             getCurrentNewsList()
         }
-    }, [])
+    }, [category])
 
 
     // set the conditional here to check if the localStorage already has data
@@ -64,13 +74,13 @@ function App() {
 
 
         // 1 try to store the current category 
-        // 2 update current category variable with what the use has clicked
+        // 2 update current category variable with what the user has clicked
         // 3 make an if cond with || 
+        
     
         if(now.getTime() > currentNewsListExpiry) {
             localStorage.removeItem('currentNewsList')
             localStorage.removeItem('expiry')
-            // console.log('test3')
             isDataFromLocalStorage = false;
             getCurrentNewsList()
         } else {
@@ -78,6 +88,13 @@ function App() {
             newsListFromLocalStorage = JSON.parse(localStorage.getItem('currentNewsList'))
         } 
     } 
+    if(categoryChange){
+        console.log(categoryChange)
+        localStorage.removeItem('currentNewsList')
+        localStorage.removeItem('expiry')
+        isDataFromLocalStorage = false;
+        getCurrentNewsList()
+    }
     // else {
     //     console.log('test2')
     //     isDataFromLocalStorage = false;

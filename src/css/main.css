@@ -394,7 +394,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: flex-end;
-    bottom: 0;
+    /* bottom: 0; */
 }
 
 .footer-links {
