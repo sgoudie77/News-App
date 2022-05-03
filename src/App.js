@@ -15,20 +15,23 @@ function App() {
   
     var API_KEY = process.env.REACT_APP_API_KEY;
     // let category = 'general';
-    let categoryChange = false;
+                // let categoryChange = false;
     const [category, setCategory] = useState('general')
     const [newsList, setNewsList] = useState(null);
     // const [articleUrl, setArticleUrl] = useState(`https://newsapi.org/v2/top-headlines?country=us&category=${category}&apiKey=${API_KEY}`);
     
     const categoryClick = (clickedCategory) => {
-        console.log(`category: ${clickedCategory}`);
-        console.log(category)
+                // console.log(`category: ${clickedCategory}`);
+                // console.log(category)
 
-        if (category !== clickedCategory){
-            categoryChange = true
+        if (localStorage.currentCategory !== clickedCategory){
+            
+            localStorage.currentCategory = clickedCategory
+
+            localStorage.removeItem('currentNewsList')
+            setCategory(clickedCategory)
         }
-        console.log(categoryChange)
-        setCategory(clickedCategory)
+                // console.log(categoryChange)
         // setArticleUrl(`https://newsapi.org/v2/top-headlines?country=us&category=${clickedCategory}&apiKey=${API_KEY}`)
     }
 
@@ -49,9 +52,15 @@ function App() {
             return response.json();
         })
         .then(data => {
+            localStorage.removeItem('currentNewsList')
+            localStorage.removeItem('expiry')
+            localStorage.removeItem('currentCategory')
+
             console.log(data);
             setNewsList(data);
+            
             localStorage.setItem('currentNewsList', JSON.stringify(data));
+            localStorage.setItem('currentCategory', category);
             const currentTime = new Date();
             // set expiry
             const expiry = currentTime.getTime() + millisecondsInHour;
@@ -79,8 +88,8 @@ function App() {
         
     
         if(now.getTime() > currentNewsListExpiry) {
-            localStorage.removeItem('currentNewsList')
-            localStorage.removeItem('expiry')
+                    // localStorage.removeItem('currentNewsList')
+                    // localStorage.removeItem('expiry')
             isDataFromLocalStorage = false;
             getCurrentNewsList()
         } else {
@@ -88,13 +97,13 @@ function App() {
             newsListFromLocalStorage = JSON.parse(localStorage.getItem('currentNewsList'))
         } 
     } 
-    if(categoryChange){
-        console.log(categoryChange)
-        localStorage.removeItem('currentNewsList')
-        localStorage.removeItem('expiry')
-        isDataFromLocalStorage = false;
-        getCurrentNewsList()
-    }
+                    // if(categoryChange){
+                    //     console.log(categoryChange)
+                    //     localStorage.removeItem('currentNewsList')
+                    //     localStorage.removeItem('expiry')
+                    //     isDataFromLocalStorage = false;
+                    //     getCurrentNewsList()
+                    // }
     // else {
     //     console.log('test2')
     //     isDataFromLocalStorage = false;

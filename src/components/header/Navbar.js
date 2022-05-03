@@ -5,6 +5,9 @@ import logo from '../../img/GNS-logo.png'
 import { Link } from 'react-router-dom';
 import NavSearchBtn from './NavSearchBtn';
 
+// const loc = window.location.pathname
+// console.log(loc)
+console.log(window.location.pathname)
 
 class Navbar extends Component {
         state = { clicked: false }
@@ -53,6 +56,7 @@ class Navbar extends Component {
                     </Link>
                 </div> */}
                 <NavSearchBtn />
+                
             </nav>
         )
     }

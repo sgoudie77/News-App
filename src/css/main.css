@@ -22,7 +22,7 @@ html {
     --clr-white: #ffffff;
     --clr-black: #000000;
     /* box shadow */
-    --bs-black: 2px 5px 5px 1px #000000d0;
+    --bs-black: 2px 4px 5px 1px #000000d0;
 }
 
 body {
