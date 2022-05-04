@@ -4,12 +4,10 @@
     padding: 0;
     box-sizing: border-box;
 }
-
 html {
     scroll-behavior: smooth;
     font-size: 62.5%;
 }
-
 :root {
     /* font sizes */
     --fs-h1: 4rem;
@@ -24,7 +22,6 @@ html {
     /* box shadow */
     --bs-black: 2px 4px 5px 1px #000000d0;
 }
-
 body {
     height: auto;
     min-height: 100vh;
@@ -33,7 +30,6 @@ body {
     height: auto;
     overflow-y: scroll;
 }
-
 .btn-home {
     position: relative;
     height: 35px;
@@ -57,7 +53,6 @@ body {
     height: auto;
     justify-content: space-evenly;
 }
-
 .headline {
     position: relative;
     display: flex;
@@ -67,13 +62,11 @@ body {
     align-self: start;
     margin-top: 2.5rem;
 }
-
 .headline h4 {
     margin-bottom: .5rem;
     text-transform: uppercase;
     font-size: var(--fs-h4);
 }
-
 .headline h4::before {
     content: " ";
     display: inline-block;
@@ -83,37 +76,28 @@ body {
     padding: 0;
     width: 0;
 }
-
 .headline-content {
     padding: 1rem; 
     box-shadow: var(--bs-black);
 }
-
 .headline-title h1 {
     font-size: 3rem;
 }
-
 .headline-img {
     position: relative;
     display: flex;
 }
-
 .headline-img img {
     width: 100%;
 }
-
 .headline-text {
     font-size: 2rem;
     text-align: left;
     width: 100%;
-    /* padding: 0.5rem; */
 }
-
 .headline-text p {
-    /* margin-bottom: 1.5rem; */
     line-height: 32px;
 }
-
 .headline-text p span {
     color: red;
     text-decoration: underline;
@@ -128,13 +112,11 @@ body {
     width: 30%;
     margin-top: 2.5rem;
 }
-
 .sidebar h4 {
     margin-bottom: .5rem;
     text-transform: uppercase;
     font-size: var(--fs-h4);
 }
-
 .sidebar h4::before {
     content: " ";
     display: inline-block;
@@ -144,11 +126,9 @@ body {
     padding: 0;
     width: 0;
 }
-
 .sidebar ul li {
     list-style: none;
 }
-
 .sidebar-post {
     position: relative;
     display: flex;
@@ -161,26 +141,21 @@ body {
     box-shadow: var(--bs-black);
     margin-bottom: 1rem;
 }
-
 .sidebar-title h3 {
     font-size: 2rem;
 }
-
 .sidebar-image {
     position: relative;
     display: flex;
     width: 100%;
 }
-
 .sidebar-image img {
     width: 100%;
     object-fit: contain;
 }
-
 .sidebar-text {
     font-size: 1.5rem;
 }
-
 .sidebar-text p span {
     color: red;
     text-decoration: underline;
@@ -195,7 +170,6 @@ body {
     width: 100%;
     height: auto;
 }
-
 .news-posts-area {
     position: relative;
     display: flex;
@@ -204,7 +178,6 @@ body {
     height: auto;
     margin-bottom: 2rem;
 }
-
 .news-posts-area h4 {
     width: 100%;
     margin-left: 3.5rem;
@@ -212,7 +185,6 @@ body {
     font-size: var(--fs-h4);
     text-align: left;
 }
-
 .news-posts-area h4::before {
     content: " ";
     display: inline-block;
@@ -222,7 +194,6 @@ body {
     padding: 0;
     width: 0;
 }
-
 .news-posts-area ul {
     position: relative;
     display: flex;
@@ -231,7 +202,6 @@ body {
     justify-content: space-evenly;
     height: auto;
 }
-
 .news-posts-area ul li {
     position: relative;
     list-style: none;
@@ -242,7 +212,6 @@ body {
     box-shadow: 2px 5px 5px 1px #000000d0;
     margin: 1rem 0;
 }
-
 .news-post {
     position: relative;
     display: flex;
@@ -253,11 +222,9 @@ body {
     text-align: left;
     padding: 1rem;
 }
-
 .news-post-title h3 {
     font-size: 1.5rem;
 }
-
 .news-post-content {
     position: relative;
     display: flex;
@@ -286,28 +253,21 @@ body {
 }
 /* Lower News Posts Styles End Here */
 
-
-
-
 /* Search Styles Start Here */
 .search-page {
     position: relative;
     display: flex;
-    /* flex-direction: column; */
     justify-content: center;
     align-items: flex-start;
     flex-wrap: wrap;
     height: auto;
     width: 100%;
-    /* min-height: 76vh; */
     min-height: calc(100vh - 160px);
     margin-bottom: 2rem;
 }
 .search-page ul {
     position: relative;
     display: flex;
-    /* flex-direction: row; */
-    /* flex-direction: column; */
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
@@ -318,7 +278,6 @@ body {
     position: relative;
     list-style: none;
     display: flex;
-    /* flex-direction: column; */
     flex-wrap: wrap;
     width: 90%;
     height: auto;
@@ -346,8 +305,6 @@ body {
     color: red;
     text-decoration: underline;
 }
-
-
 .search-bar {
     position: relative;
     display: flex;
@@ -355,7 +312,6 @@ body {
     align-items: center;
     margin: 2rem 0;
     width: 50%;
-    /* border-bottom: 1px solid black; */
 }
 .search-bar input {
     width: 100%;
@@ -365,28 +321,11 @@ body {
     width: 50px;
     height: 29px;
     border-radius: 3px;
-    /* margin-left: .25rem; */
     background-color: lightgray;
     outline: none;
     border: none;
 }
-/* .search-page ul li {
-    flex-direction: column;
-    width: 100%;
-    margin: .5rem 1rem;
-} */
-/* .search-page-post-content {
-    margin-top: 0;
-} */
-/* .search-page-posts-area h4 {
-    text-align: center;
-    margin-left: 0;
-} */
 /* Search Styles End Here */
-
-
-
-
 
 /* Footer Styles Start Here */
 .footer {
@@ -394,13 +333,10 @@ body {
     display: flex;
     justify-content: center;
     align-items: flex-end;
-    /* bottom: 0; */
 }
-
 .footer-links {
     background: linear-gradient(90deg, rgb(110, 94, 254) 0%, rgba(73, 63, 252, 1) 100%);
 }
-
 .footer-links ul {
     position: relative;
     display: flex;
@@ -409,11 +345,9 @@ body {
     align-items: center;
     height: 60px;
 }
-
 .footer-links ul a {
     text-decoration: none;
 }
-
 .footer-links ul li {
     margin-left: 1rem;
     margin-right: 1rem;
@@ -431,7 +365,6 @@ body {
     display: flex;
     flex-direction: column;
     width: 100%;
-    /* min-height: 78.75vh; */
     min-height: calc(100vh - 140px);
     justify-content: center;
     align-items: center;
@@ -443,7 +376,6 @@ body {
     text-transform: uppercase;
     margin: 1rem 0;
 }
-
 .about-info p {
     position: relative;
     display: flex;
@@ -452,7 +384,6 @@ body {
     font-size: 1.5rem;
     letter-spacing: 1.5px;
 }
-
 .about-btn {
     margin: 2rem 0;
 }
@@ -464,19 +395,16 @@ body {
     display: flex;
     flex-direction: column;
     width: 100%;
-    /* min-height: 78.75vh; */
     min-height: calc(100vh - 140px);
     justify-content: center;
     align-items: center;
 }
-
 .contact-info h1 {
     display: flex;
     justify-content: center;
     text-transform: uppercase;
     margin: 1rem 0;
 }
-
 .contact-info p {
     position: relative;
     display: flex;
@@ -485,7 +413,6 @@ body {
     letter-spacing: 1.5px;
     text-align: left;
 }
-
 .contact-btn {
     margin: 2rem 0;
 }
@@ -502,7 +429,6 @@ body {
     min-height: 78.75vh;
     width: 100%;
 }
-
 .page-not-found h1 {
     margin-bottom: 2rem;
 }
