@@ -12,7 +12,7 @@ function SearchPage() {
   function getSearchRequest(searchValue) {
     
     // const searchUrl = `https://newsapi.org/v2/everything?q=${searchValue}&pageSize=20&apiKey=${API_KEY}`
-    const searchUrl = `http://api.mediastack.com/v1/news?q=${searchValue}&access_key=${API_KEY}`
+    const searchUrl = `http://api.mediastack.com/v1/news?countries=us&q=${searchValue}&access_key=${API_KEY}`
     
     fetch(searchUrl)
     .then((response) => {
@@ -20,7 +20,7 @@ function SearchPage() {
     })
     .then(searchData => {
         console.log(searchData);
-        setSearchResults(searchData.articles);
+        setSearchResults(searchData.data);
     })
 }
 
