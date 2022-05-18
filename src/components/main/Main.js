@@ -11,11 +11,11 @@ function Main(props) {
     return (
         <div>
             <div className='main'>
-                {newsList && <Headline headlines={newsList.articles[0]} />}
-                {newsList && <Sidebar sidebarNews={newsList.articles.slice(1, 3)} />}
+                {newsList && <Headline headlines={newsList.data[0]} />}
+                {newsList && <Sidebar sidebarNews={newsList.data.slice(1, 3)} />}
             </div>
             <div className='news-posts'>
-                {newsList && <News bottomNewsList={newsList.articles.slice(3, 12)} />}
+                {newsList && <News bottomNewsList={newsList.data.slice(3, 12)} />}
             </div>
         </div>
     )

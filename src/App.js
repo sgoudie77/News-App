@@ -38,7 +38,8 @@ function App() {
     const millisecondsInHour = 3600000;
     
     const getCurrentNewsList = () => {
-        const articleUrl = `https://newsapi.org/v2/top-headlines?country=us&category=${category}&apiKey=${API_KEY}`
+        // const articleUrl = `https://newsapi.org/v2/top-headlines?country=us&category=${category}&apiKey=${API_KEY}`
+        const articleUrl = `http://api.mediastack.com/v1/news?countries=us&categories=${category}&access_key=${API_KEY}`
         fetch(articleUrl)
         .then((response) => {
             return response.json();

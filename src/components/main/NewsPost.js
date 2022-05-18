@@ -9,8 +9,8 @@ function NewsPost(props) {
         <div className="news-post">
             <div className="news-post-content">
                 <div className="news-post-image">
-                    {props.newsPost.urlToImage && <img src={props.newsPost.urlToImage} alt="News Story" />}
-                    {(!props.newsPost.urlToImage || props.newsPost.urlToImage == null) && <img src = {fallbackSrc} />}
+                    {props.newsPost.image && <img src={props.newsPost.image} alt="News Story" />}
+                    {(!props.newsPost.image || props.newsPost.image == null) && <img src = {fallbackSrc} />}
                 </div>
                 <div className="news-post-title">
                     <h3>{props.newsPost.title}</h3>
