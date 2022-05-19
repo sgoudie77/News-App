@@ -8,8 +8,8 @@ function SidebarPost(props) {
     return (
         <div className="sidebar-post">
             <div className="sidebar-image">
-                {props.sidebarPost.image && <img src={props.sidebarPost.image} alt="News Story" />}
-                {(!props.sidebarPost.image || props.sidebarPost.image == null) && <img src = {fallbackSrc} />}
+                {props.sidebarPost.urlToImage && <img src={props.sidebarPost.urlToImage} alt="News Story" />}
+                {(!props.sidebarPost.urlToImage || props.sidebarPost.urlToImage == null) && <img src = {fallbackSrc} />}
             </div>
             <div className="sidebar-title">
                 <h3>{props.sidebarPost.title}</h3>

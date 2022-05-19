@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import NoImage from '../../img/noimage.jpg';
 
 
@@ -10,8 +10,8 @@ function SearchPagePost(props) {
     <div className='search-page-post'>
         <div className="search-page-post-content">
             <div className="search-page-post-image">
-                {props.searchResultsPost.image && <img src={props.searchResultsPost.image} alt="News Story" />}
-                {(!props.searchResultsPost.image || props.searchResultsPost.image == null) && <img src = {fallbackSrc} />}
+                {props.searchResultsPost.urlToImage && <img src={props.searchResultsPost.urlToImage} alt="News Story" />}
+                {(!props.searchResultsPost.urlToImage || props.searchResultsPost.urlToImage == null) && <img src = {fallbackSrc} />}
             </div>
             <div className="search-page-post-title">
                 <h3>{props.searchResultsPost.title}</h3>

@@ -1,5 +1,5 @@
-import React from 'react'
-import BtnHome from '../buttons/BtnHome'
+import React from 'react';
+import BtnHome from '../buttons/BtnHome';
 
 function About() {
     return (
@@ -8,7 +8,7 @@ function About() {
                 <h1>About This News App</h1>
                 <h2>What is this app?</h2>
                 <p>
-                    This is a responsive React app using a fetch API called Mediastack API. This app was created with both class and functional components for learning and practice purposes while building this project as part of a web development program. This app also makes use of React hooks (i.e. useEffect, useState, and useLocation) for the functionality, as well as Router V6.2.1 to link to it's pages and components.
+                    This is a React app using a fetch API called NewsAPI, and it is responsive for mobile devices. This app was created with both class and functional components for learning and practice purposes while building this project as part of a web development program. This app also makes use of React hooks (i.e. useEffect, useState, and useLocation) for the functionality, as well as Router V6.2.1 to link to it's pages and components.
                 </p>
                 <h2>How can I use this news app?</h2>
                 <p>
@@ -20,7 +20,7 @@ function About() {
                 </p>
                 <h2>Limitation of this app</h2>
                 <p>
-                    Since this project uses the free plan for this API, it is limited to 500 calls per month. Also, the free plan only returns delayed news data instead of live news data, and there are only missing images in the API responses. In addition, the data returned in each API call does not contain any content for each article, only a short description, so an external link is provided for users to go to the source and read the full news article.                
+                    Since this project uses the free plan for this API, it is limited to 100 requests per day, so the app makes use of localStorage to hold responses for one hour which is the average update time for the API data. Also, the free plan only returns delayed news data instead of live news data, and responses cannot return multiple categories at once. In addition, the data returned in each API call does not contain an id to filter the articles or any content to display for each article, only a short description, so an external link is provided for users to go to the source and read the full news article.                
                 </p>
                 <h2>Future improvements</h2>
                 <p>

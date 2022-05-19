@@ -1,5 +1,5 @@
-import React from 'react'
-import NewsPost from './NewsPost'
+import React from 'react';
+import NewsPost from './NewsPost';
 
 function News(props) {
     

@@ -1,12 +1,10 @@
-import React from 'react'
-import './Navbar.css'
+import React from 'react';
+import './Navbar.css';
 import { Link, useLocation } from 'react-router-dom';
 
 function NavSearchBtn() {
   
-    // const { pathname } = useLocation();
     const location = useLocation();
-    // console.log(location)
     
     return (
         <div>

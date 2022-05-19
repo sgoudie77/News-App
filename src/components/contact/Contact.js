@@ -1,5 +1,5 @@
-import React from 'react'
-import BtnHome from '../buttons/BtnHome'
+import React from 'react';
+import BtnHome from '../buttons/BtnHome';
 
 function Contact() {
     return (
