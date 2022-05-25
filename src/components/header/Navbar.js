@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { MenuItems } from './MenuItems';
 import './Navbar.css';
-import logo from '../../img/GNS-logo.png';
+import logo from '../../img/logo-gns-blue.png';
 import { Link } from 'react-router-dom';
 import NavSearchBtn from './NavSearchBtn';
 
@@ -41,8 +41,8 @@ class Navbar extends Component {
                         )
                     })}
                 </ul>
-                
                 <NavSearchBtn /> 
+                
             </nav>
         )
     }

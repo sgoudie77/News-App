@@ -24,11 +24,12 @@
 
 .nav-menu {
     display: grid;
-    grid-template-columns: repeat(7, auto);
+    grid-template-columns: repeat(5, auto);
     grid-gap: 10px;
     list-style: none;
     text-align: center;
     width: 92vw;
+    margin-right: 1rem;
     justify-content: end;
 }
 
@@ -65,10 +66,11 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100px;
-    background-color: white;
-    padding: .5rem .25rem;
-    margin-right: 4rem;
+    width: 150px;
+    background-color: #6d76f7;
+    padding: 1.35rem 1.25rem;
+    margin-right: 1.5rem;
+    /* margin-left: 1rem; */
     font-size: 1.25rem;
     letter-spacing: 1px;
 }
@@ -76,11 +78,12 @@
 .search-bar-nav i {
     width: 20px;
     font-size: 16px;
-    color: black;
+    color: white;
 }
 .search-bar-nav p {
-    font-size: 1.2rem;
-    font-weight: 200;
+    font-size: 1.5rem;
+    /* font-weight: 200; */
+    color: white;
 }
 
 @media screen and (max-width: 768px) {
@@ -98,6 +101,7 @@
         left: -100%;
         opacity: 1;
         transition: all 0.5s ease;
+        margin-right: 0;
     }
 
     .nav-menu.active {
@@ -144,5 +148,6 @@
 
     .search-bar-nav {
         margin-right: 0;
+        margin-left: 1rem;
     }
 }

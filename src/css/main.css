@@ -34,13 +34,19 @@ body {
     position: relative;
     height: 35px;
     width: 180px;
-    color: #000;
-    background-color: #6d76f7;
+    color: white;
+    letter-spacing: 1px;
+    background-color: rgb(110, 94, 254);
     padding: 0 1rem;
-    border: 1px solid #000;
+    border: 1px solid #6d76f7;
     outline: none;
     text-transform: uppercase;
     cursor: pointer;
+    transition: 0.2s ease;
+}
+.btn-home:hover {
+    background-color: #6d76f7;
+    transition: 0.2s ease;
 }
 /* Global Styles End Here */
 
