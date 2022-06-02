@@ -4,6 +4,8 @@ import NoImage from '../../img/noimage.jpg';
 
 function SearchPagePost(props) {
   
+    const dateObject = new Date(props.searchResultsPost.publishedAt);
+    const dateDisplay = dateObject.toLocaleString("en-US", {weekday: "long", month: "long", day: "numeric"});
     const fallbackSrc = NoImage
 
     return (
@@ -14,6 +16,7 @@ function SearchPagePost(props) {
                 {(!props.searchResultsPost.urlToImage || props.searchResultsPost.urlToImage == null) && <img src = {fallbackSrc} />}
             </div>
             <div className="search-page-post-title">
+                <p>{dateDisplay}</p>
                 <h3>{props.searchResultsPost.title}</h3>
             </div>
         </div>

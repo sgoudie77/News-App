@@ -17,6 +17,8 @@ function Headline(props) {
                 </div>
                 <div className="headline-title">
                     <p>{dateDisplay}</p>
+                    {/* <p className='author'>Author: {props.headlines.author}</p> */}
+                    <p className='source'>Source: {props.headlines.source.name}</p>
                     <h1>{props.headlines.title}</h1>
                 </div>
                 <div className="headline-text">

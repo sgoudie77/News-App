@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { MenuItems } from './MenuItems';
 import './Navbar.css';
-import logo from '../../img/logo-gns-clr.png';
+import logo from '../../img/logo-gns-off-white.png';
 import { Link } from 'react-router-dom';
 import NavSearchBtn from './NavSearchBtn';
 

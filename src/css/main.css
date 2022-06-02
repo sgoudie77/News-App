@@ -29,7 +29,7 @@ body {
     max-width: 100vw;
     height: auto;
     overflow-y: scroll;
-    background-color: #f5f5f5;
+    background-color: #fcfcfc;
 }
 .btn-home {
     position: relative;
@@ -59,6 +59,7 @@ body {
     width: 100%;
     height: auto;
     justify-content: space-evenly;
+    margin-bottom: 2rem;
 }
 .headline {
     position: relative;
@@ -66,8 +67,10 @@ body {
     flex-direction: column;
     flex-wrap: wrap;
     width: 62.5%;
+    height: 100%;
     align-self: start;
     margin-top: 2.5rem;
+    
 }
 .headline h4 {
     margin-bottom: .5rem;
@@ -84,17 +87,23 @@ body {
     width: 0;
 }
 .headline-content {
-    padding: 1rem; 
-    box-shadow: var(--bs-black);
-    
+    /* padding: 1rem;  */
+    /* box-shadow: var(--bs-black); */
+    background-color: #ffffff;
+    height: 100%;
+    /* min-height: 120vh; */
 }
 .headline-title p {
-    margin: 1rem 0;
+    margin: .5rem 0;
     font-size: var(--fs-h5);
 }
 .headline-title h1 {
     font-size: 3rem;
-    margin-bottom: 1rem;
+    margin-bottom: .5rem;
+}
+.headline-title .author,
+.headline-title .source {
+    font-weight: 600;
 }
 .headline-img {
     position: relative;
@@ -107,7 +116,7 @@ body {
     font-size: 2rem;
     text-align: left;
     width: 100%;
-    min-height: 27.7vh;
+    /* min-height: 33vh; */
 }
 .headline-text p {
     line-height: 32px;
@@ -124,7 +133,9 @@ body {
     display: flex;
     flex-wrap: wrap;
     width: 30%;
+    height: 100%;
     margin-top: 2.5rem;
+    align-self: start;
 }
 .sidebar h4 {
     margin-bottom: .5rem;
@@ -140,8 +151,18 @@ body {
     padding: 0;
     width: 0;
 }
+.sidebar ul {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* min-height: 120vh; */
+}
 .sidebar ul li {
     list-style: none;
+}
+.sidebar ul li:nth-child(1) {
+    margin-bottom: 2rem;
 }
 .sidebar-post {
     position: relative;
@@ -151,12 +172,14 @@ body {
     width: 100%;
     height: auto;
     text-align: left;
-    padding: 1rem;
-    box-shadow: var(--bs-black);
-    margin-bottom: 1rem;
+    /* padding: 1rem; */
+    /* box-shadow: var(--bs-black); */
+    /* margin-bottom: 1rem; */
+    background-color: #ffffff;
 }
 .sidebar-title h3 {
     font-size: 1.7rem;
+    margin: .5rem 0;
 }
 .sidebar-image {
     position: relative;
@@ -169,6 +192,7 @@ body {
 }
 .sidebar-text {
     font-size: 1.5rem;
+    min-height: 10vh;
 }
 .sidebar-text p span {
     color: red;
@@ -194,10 +218,12 @@ body {
 }
 .news-posts-area h4 {
     width: 100%;
-    margin-left: 3.5rem;
+    /* margin-left: 3.5rem; */
+    padding-left: 2.5%;
     text-transform: uppercase;
     font-size: var(--fs-h4);
     text-align: left;
+    margin: 1rem 0;
 }
 .news-posts-area h4::before {
     content: " ";
@@ -223,8 +249,9 @@ body {
     flex-wrap: wrap;
     width: 30%;
     height: auto;
-    box-shadow: var(--bs-black);
+    /* box-shadow: var(--bs-black); */
     margin: 1rem 0;
+    background-color: #ffffff;
 }
 .news-post {
     position: relative;
@@ -234,10 +261,10 @@ body {
     width: 100%;
     height: auto;
     text-align: left;
-    padding: 1rem;
+    /* padding: 1rem; */
 }
 .news-post-title h3 {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
 }
 .news-post-content {
     position: relative;
@@ -252,7 +279,7 @@ body {
     display: flex;
     flex-wrap: wrap;
     text-align: left;
-    padding: .5rem;
+    padding-top: .5rem;
     font-size: 1.4rem;
 }
 /* .news-post-text p {
@@ -295,24 +322,32 @@ body {
     flex-wrap: wrap;
     width: 90%;
     height: auto;
-    box-shadow: 2px 5px 5px 1px #000000d0;
-    margin: 1rem;
+    /* box-shadow: 2px 5px 5px 1px #000000d0; */
+    margin: 1.5rem;
 }
 .search-page-post-content {
     position: relative;
     display: flex;
     flex-direction: row;
-    padding: 1rem;
+    /* padding: 1rem; */
 }
 .search-page-post-image img {
     width: 15rem;
     margin-right: 1rem;
 }
+.search-page-post-title p {
+    font-size: 1.25rem;
+}
+.search-page-post-title h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-top: .25rem;
+}
 .search-page-post-text {
     display: flex;
     flex-wrap: wrap;
     text-align: left;
-    padding: .5rem;
+    padding-top: .5rem;
     font-size: 1.4rem;
 }
 .search-page-post-text p span {
@@ -329,15 +364,27 @@ body {
 }
 .search-bar input {
     width: 100%;
-    padding: .5rem .25rem;
+    padding: .5rem;
+    outline: none;
+    /* border-radius: 2px 0 0 2px; */
+}
+.search-bar input:focus {
+    outline: none;
+    border: 2px solid #6d76f7;
 }
 .search-bar button {
     width: 50px;
     height: 29px;
-    border-radius: 3px;
-    background-color: lightgray;
+    border-radius: 0 2px 2px 0;
+    background-color: #6d76f7;
     outline: none;
     border: none;
+    transition: 0.2s ease;
+    cursor: pointer;
+}
+.search-bar button:hover {
+    background-color: rgb(110, 94, 254);
+    transition: 0.2s ease;
 }
 /* Search Styles End Here */
 
@@ -397,11 +444,21 @@ body {
     margin-left: 5rem;
     font-weight: 600;
 }
+.about-info h2::before {
+    content: " ";
+    display: inline-block;
+    margin-right: 0.7rem;
+    border-left: 3px solid #47a1d8;
+    height: 1.25rem;
+    /* padding: .5rem 0 0 0; */
+    margin-top: .375rem;
+    width: 0;
+}
 .about-info p {
     position: relative;
     display: flex;
     justify-content: center;
-    padding: 1rem 5rem;
+    padding: 0 5rem;
     font-size: 1.5rem;
     letter-spacing: 1.5px;
 }
@@ -460,18 +517,27 @@ body {
     .main {
         flex-direction: column;
         width: 100%;
-        padding: 1rem;
+        /* padding: 1rem; */
+        padding: 0 3.4rem;
     }
     .headline {
         width: 100%;
-        margin: 0;
+        /* margin: 0; */
+        margin-top: 1rem;
     }
+    /* .headline-content {
+        margin: 0 2.5rem;
+    } */
     .headline h4 {
         text-align: center;
         margin-left: 0;
+        margin-top: 2rem;
     }
     .headline-title h1 {
         font-size: 2.25rem;
+    }
+    .headline-text {
+        min-height: 5vh;
     }
     .headline-text p {
         font-size: 1.5rem;
@@ -485,11 +551,14 @@ body {
         align-items: center;
         flex-direction: row;
         width: 100%;
-        margin-top: 1rem;
+        /* margin-top: 1rem; */
+        /* margin-left: 2rem;
+        margin-right: 2rem; */
     }
     .sidebar ul {
         position: relative;
         display: flex;
+        flex-direction: row;
         justify-content: center;
         width: 100%;
     }
@@ -498,18 +567,26 @@ body {
         display: flex;
         justify-content: flex-start;
         width: 50%;
+        margin-bottom: 0;
+    }
+    .sidebar ul li:nth-child(1) {
+        margin-right: 1rem;
+        margin-bottom: 0;
+    }
+    .sidebar ul li:nth-child(2) {
+        margin-left: 1rem;
     }
     .sidebar-post {
         position: relative;
         display: flex;
         justify-content: flex-start;
-        align-items: center;
+        /* align-items: center; */
         width: 100%;
         padding: 1rem;
     }
-    .sidebar ul li:nth-child(1) {
+    /* .sidebar ul li:nth-child(1) {
         padding-right: 1rem;
-    }
+    } */
     .sidebar-title h3 {
         font-size: 1.75rem;
         width: auto;
@@ -517,11 +594,15 @@ body {
     .sidebar-text {
         margin-bottom: 0;
         width: auto;
+        min-height: 1vh;
+    }
+    .news-posts-area ul {
+        padding: 0 2.5rem;
     }
     .news-posts-area ul li {
         flex-direction: column;
         width: 100%;
-        margin: .5rem 1rem;
+        margin: 1rem;
     }
     .news-post-content {
         margin-top: 0;
@@ -534,16 +615,34 @@ body {
 @media (max-width: 568px) {
     .headline-title h1 {
         font-size: 1.8rem;
+        line-height: 24px;
+    }
+    .headline-title p {
+        font-size: 1.25rem;
+    }
+    .sidebar ul {
+        flex-direction: column;
+    }
+    .sidebar ul li:nth-child(1) {
+        padding-right: 0;
+    }
+    .sidebar ul li {
+        width: 100%;
+    }
+    .sidebar ul li:nth-child(1) {
+        margin-right: 0;
+    }
+    .sidebar ul li:nth-child(2) {
+        margin-left: 0;
     }
     .sidebar-title h3 {
-        font-size: 1.5rem;
-        
+        font-size: 1.4rem;
     }
     .sidebar-text {
         font-size: 1.25rem;
     }
     .news-post-title h3 {
-        font-size: 1.4rem;
+        font-size: 1.25rem;
     }
     .news-post-title p {
         font-size: 1rem;
@@ -552,6 +651,7 @@ body {
         margin-left: 0;
         margin-right: 0;
         font-size: 1.1rem;
+        padding: 0.5rem;
     }
 }
 /* Responsive Styles End Here */
