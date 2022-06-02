@@ -93,13 +93,24 @@ body {
     height: 100%;
     /* min-height: 120vh; */
 }
+.headline-title h1::before {
+    border-top: 1px solid #d9d9d9;
+    content: "";
+    display: block;
+    height: 1px;
+    margin-top: -1px;
+    margin-bottom: 10px;
+    position: absolute;
+    width: 80px;
+}
 .headline-title p {
-    margin: .5rem 0;
+    margin: 1rem 0;
     font-size: var(--fs-h5);
 }
 .headline-title h1 {
     font-size: 3rem;
     margin-bottom: .5rem;
+    margin-top: 1rem;
 }
 .headline-title .author,
 .headline-title .source {
@@ -121,7 +132,7 @@ body {
 .headline-text p {
     line-height: 32px;
 }
-.headline-text p span {
+.headline-text a {
     color: red;
     text-decoration: underline;
 }
@@ -177,9 +188,28 @@ body {
     /* margin-bottom: 1rem; */
     background-color: #ffffff;
 }
+.sidebar-title p {
+    font-size: 1.25rem;
+    margin-top: .25rem;
+}
 .sidebar-title h3 {
     font-size: 1.7rem;
     margin: .5rem 0;
+
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+.sidebar-title h3::before {
+    border-top: 1px solid #d9d9d9;
+    content: "";
+    display: block;
+    height: 1px;
+    margin-top: -2px;
+    margin-bottom: 10px;
+    position: absolute;
+    width: 80px;
 }
 .sidebar-image {
     position: relative;
@@ -193,8 +223,16 @@ body {
 .sidebar-text {
     font-size: 1.5rem;
     min-height: 10vh;
+
+    
 }
-.sidebar-text p span {
+.sidebar-text p {
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+.sidebar-text a {
     color: red;
     text-decoration: underline;
 }
@@ -223,7 +261,7 @@ body {
     text-transform: uppercase;
     font-size: var(--fs-h4);
     text-align: left;
-    margin: 1rem 0;
+    margin-top: 1rem;
 }
 .news-posts-area h4::before {
     content: " ";
@@ -263,8 +301,26 @@ body {
     text-align: left;
     /* padding: 1rem; */
 }
+.news-post-title p {
+    font-size: 1.25rem;
+}
 .news-post-title h3 {
-    font-size: 1.4rem;
+    font-size: 1.5rem;
+    padding-top: .5rem;
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+.news-post-title h3::before {
+    border-top: 1px solid #d9d9d9;
+    content: "";
+    display: block;
+    height: 1px;
+    margin-top: -2px;
+    margin-bottom: 10px;
+    position: absolute;
+    width: 80px;
 }
 .news-post-content {
     position: relative;
@@ -282,13 +338,17 @@ body {
     padding-top: .5rem;
     font-size: 1.4rem;
 }
-/* .news-post-text p {
+.news-post-text p {
     display: -webkit-box;
     overflow: hidden;
-    -webkit-line-clamp: 2;
+    -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
+}
+/* .news-post-text p span {
+    color: red;
+    text-decoration: underline;
 } */
-.news-post-text p span {
+.news-post-text a {
     color: red;
     text-decoration: underline;
 }
@@ -338,10 +398,25 @@ body {
 .search-page-post-title p {
     font-size: 1.25rem;
 }
+.search-page-post-title h3::before {
+    border-top: 1px solid #d9d9d9;
+    content: "";
+    display: block;
+    height: 1px;
+    margin-top: -2px;
+    margin-bottom: 10px;
+    position: absolute;
+    width: 80px;
+}
 .search-page-post-title h3 {
     font-size: 1.5rem;
     font-weight: 600;
-    margin-top: .25rem;
+    margin-top: .5rem;
+
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
 }
 .search-page-post-text {
     display: flex;
@@ -533,6 +608,9 @@ body {
         margin-left: 0;
         margin-top: 2rem;
     }
+    .headline-title h1::before {
+        margin-top: -3px;
+    }
     .headline-title h1 {
         font-size: 2.25rem;
     }
@@ -638,14 +716,14 @@ body {
     .sidebar-title h3 {
         font-size: 1.4rem;
     }
-    .sidebar-text {
+    /* .sidebar-text {
         font-size: 1.25rem;
-    }
+    } */
     .news-post-title h3 {
-        font-size: 1.25rem;
+        font-size: 1.4rem;
     }
     .news-post-title p {
-        font-size: 1rem;
+        font-size: 1.25rem;
     }
     .footer-links ul li {
         margin-left: 0;

@@ -3,6 +3,8 @@ import NoImage from '../../img/noimage.jpg';
 
 function SidebarPost(props) {
     
+    const dateObject = new Date(props.sidebarPost.publishedAt);
+    const dateDisplay = dateObject.toLocaleString("en-US", {weekday: "long", month: "long", day: "numeric"});
     const fallbackSrc = NoImage
     
     return (
@@ -12,10 +14,11 @@ function SidebarPost(props) {
                 {(!props.sidebarPost.urlToImage || props.sidebarPost.urlToImage == null) && <img src = {fallbackSrc} />}
             </div>
             <div className="sidebar-title">
+                <p>{dateDisplay}</p>
                 <h3>{props.sidebarPost.title}</h3>
             </div>
             <div className="sidebar-text">
-                <p>{props.sidebarPost.description} <a href={props.sidebarPost.url} target="_blank"><span>Read More...</span></a></p>
+                <p>{props.sidebarPost.description}</p> <a href={props.sidebarPost.url} target="_blank">Read More...</a>
             </div>
         </div>
     )
