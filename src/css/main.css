@@ -622,6 +622,9 @@ body {
         line-height: 2rem;
         margin-bottom: 0;
     }
+    .headline-text a {
+        font-size: 1.5rem;
+    }
     .sidebar {
         position: relative;
         display: flex;
