@@ -91,7 +91,6 @@ body {
     /* box-shadow: var(--bs-black); */
     background-color: #ffffff;
     height: 100%;
-    /* min-height: 120vh; */
 }
 .headline-title h1::before {
     border-top: 1px solid #d9d9d9;
@@ -127,7 +126,6 @@ body {
     font-size: 2rem;
     text-align: left;
     width: 100%;
-    /* min-height: 33vh; */
 }
 .headline-text p {
     line-height: 32px;
@@ -167,7 +165,6 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    /* min-height: 120vh; */
 }
 .sidebar ul li {
     list-style: none;
@@ -185,7 +182,6 @@ body {
     text-align: left;
     /* padding: 1rem; */
     /* box-shadow: var(--bs-black); */
-    /* margin-bottom: 1rem; */
     background-color: #ffffff;
 }
 .sidebar-title p {
@@ -223,8 +219,6 @@ body {
 .sidebar-text {
     font-size: 1.5rem;
     min-height: 10vh;
-
-    
 }
 .sidebar-text p {
     display: -webkit-box;
@@ -441,7 +435,6 @@ body {
     width: 100%;
     padding: .5rem;
     outline: none;
-    /* border-radius: 2px 0 0 2px; */
 }
 .search-bar input:focus {
     outline: none;
@@ -597,7 +590,6 @@ body {
     }
     .headline {
         width: 100%;
-        /* margin: 0; */
         margin-top: 1rem;
     }
     /* .headline-content {
